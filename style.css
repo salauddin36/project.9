@@ -90,3 +90,13 @@ body{
     width: 30px;
     display: block;
 }
+@media screen and (max-width: 768px) {
+    .time{
+        width: 300px;
+        padding: 5px;
+        border-radius: 5px;
+    }
+    .right-down{
+        margin-left: 10px;
+    }
+}
