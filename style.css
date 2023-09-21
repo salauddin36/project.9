@@ -2,12 +2,19 @@
     margin: 0;padding: 0;box-sizing: border-box;
     font-family: 'poppins', sans-serif;
 }
-
 body{
-    background-color: rgb(0, 0, 0);
+    background-color: black;
+}
+.header{
+    background-color: #2d2f38;
+    color: aliceblue;
+    text-align: center;
+    padding: 15px 0px 10px 0px;
+}
+.container{
     display: flex;
     justify-content: center;
-    height: 80vh;
+    height: 92vh;
     align-items: center;
 }
 .time{
@@ -22,24 +29,38 @@ body{
     border-radius: 10px;
     position: relative;
 }
-.time::before{
+.time::before {
     content: '';
-    background: linear-gradient(45deg,red,pink,green);
-    
+    background: linear-gradient(45deg, rgba(255, 0, 0, 0.7), rgba(255, 192, 203), rgba(0, 128, 0, 0.7));
     position: absolute;
     top: -5px;
     left: -5px;
     bottom: -5px;
     right: -5px;
     z-index: -1;
-    filter: blur(30px);
+    filter: blur(10px);
     animation: glowing 5s ease infinite;
 }
-@keyframes glowing{
-    0%{background-position: 0% 50%;}
-    50%{background-position: 100% 50%;}
-    100%{background-position: 0% 50%;}
+
+@keyframes glowing {
+    0% {
+        transform: scale(1);
+        opacity: 0.5;
+        filter: blur(10px);
+    }
+    50% {
+        transform: scale(1.1);
+        opacity: 1;
+        filter: blur(15px);
+    }
+    100% {
+        transform: scale(1);
+        opacity: 0.5;
+        filter: blur(10px);
+    }
 }
+
+
 #hours{
     font-size: 120px;
     font-weight: 600;
